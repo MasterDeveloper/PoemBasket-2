@@ -58,13 +58,18 @@
                     </div>
                 </div>
                 <div class="col-sm-6 text-right hidden-xs">
+                    <span class="login-section">
+                        <a href="#myModal-2" class="btn theme-btn" role="button"  data-toggle="modal"><span>Register</span></a>
+                        <a href="#myModal" class="btn theme-btn" role="button"  data-toggle="modal">Login</a>
+                    </span>
                     <span class="social-icons">
                         <a href="#" class="facebook"><span class="icon-facebook"></span></a>
                         <a href="#" class="twitter"><span class="icon-twitter"></span></a>
-                        <a href="#" class="linkedin"><span class="icon-linkedin"></span></a>
                         <a href="#" class="youtube"><span class="icon-youtube"></span></a>
-                        <a href="#" class="google-plus"><span class="icon-google-plus"></span></a>
+                        <a href="#" class="linkedin"><span class="icon-linkedin"></span></a>
                         <a href="#" class="pinterest"><span class="icon-pinterest"></span></a>
+                        <a href="#" class="rss"><span class="icon-rss"></span></a>
+                        <a href="#" class="google-plus"><span class="icon-google-plus"></span></a>
                     </span>
                 </div>
             </div>
@@ -74,7 +79,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <div role="navigation" class="navbar rounded">
+                    <div role="navigation" class="navbar">
                     	<div class="container">
                             <div class="navbar-header">
                                 <button data-target=".bs-navbar-collapse" data-toggle="collapse" 
@@ -84,22 +89,14 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                
-                                <span class="pull-right login-section">
-                                    <a href="#myModal-2" class="btn btn-black rounded" role="button"  data-toggle="modal"><span>Register</span></a>
-                                    <a href="#myModal" class="btn btn-black rounded" role="button"  data-toggle="modal">Login</a>
-                                </span>
-                                
-                                
                             </div><!-- navbar-header -->
                             <nav role="navigation" class="navbar-collapse bs-navbar-collapse collapse">
                                 <ul class="nav navbar-nav">
+                                   		   		   	  
                                     <li class="active"><a href="#">Home</a></li>
-                                    <li><a href="#">Recipes</a></li>
-                                    <li><a href="#">Cuisine</a></li>
-                                    <li><a href="#">Food Type</a></li>
-                                    <li><a href="#">Intergidents </a></li>
-                                    <li><a href="#">Submit A Recipe</a></li>
+                                    <li><a href="#">Topics</a></li>
+                                    <li><a href="#">Authors</a></li>
+                                    <li><a href="#">Picture Poems</a></li>
                                 </ul>
                             </nav><!-- navbar-collapse -->
 						</div>
@@ -107,6 +104,11 @@
                     </div><!-- navbar -->
                 </div><!-- col-12-->
             </div><!-- row -->
+            <div class="banner-wrap">
+                <div class="submit-poem">
+                    <a href="#" class="btn btn-lg btn-orange">Submit Poem</a>
+                </div>
+            </div>
         </div><!-- container -->
     </div><!-- header -->
 </div>
@@ -160,13 +162,13 @@
                                 </p>
                             </div>
 	                        <div class="col-lg-7 social-buttons text-right">
-                            	<a href="#" class="btn btn-facebook">
+                            	<a href="#" class="btn theme-btn">
                                 	<span><em class="icon-facebook"></em></span>
                                     Post on facebook
                                 </a>
-                                <a href="#" class="btn-twitter btn">
+                                <a href="#" class="theme-btn btn">
                                 	<span class="icon-twitter"></span> Tweet it</a>
-                                <a href="#" class="btn-pinterest btn"><span class="icon-facebook"></span> Pin it</a>
+                                <a href="#" class="theme-btn btn"><span class="icon-pinterest"></span> Pin it</a>
     	                    </div>
                             <div class="col-lg-12" style="overflow:hidden;">
                             	<div id="fb-root"></div>
@@ -192,62 +194,54 @@
             </div><!-- col-sm-8 col-md-8 -->
             <aside id="sidebar" class="col-sm-4 col-md-3">
                 <div class="sidebar-section pb-widget">
-                	<a href="#" class="btn btn-block btn-lg btn-light">Submit Poem</a>
+                	<img alt="" src="images/add-1.png">
                 </div>
-                <div class="sidebar-section pb-widget">
-                	<img src="images/add-1.png" alt="" />
-                </div>
-                <div class="sidebar-section pb-widget">
-                	<div class="section-header">Poem of the Day</div>
-                    <div class="poem-section">
-                    	<div class="poem-header">
-                            <img class="pull-left" src="images/author-thumb.png" alt="" />
-                            <h4>A Study (A Soul) </h4>
-                            <p>by Christina Georgina Rossetti</p>
-                        </div>
-                        <p>
-                            <em>She stands as pale as Parian statues stand;
-                                Like Cleopatra when she turned at bay,
-                                And felt her strength above the Roman sway,
-                                And felt the aspic writhing in her hand.
-                                Her face is steadfast toward the shadowy land,
-                                For dim beyond it looms the light of day;
-                                Her feet are steadfast; all the arduous way
-                                That foot-track hath not wavered on the sand.
-                                She stands there like a beacon thro' the night,
-                                A pale clear beacon where the storm-drift is;
-                                She stands alone, a wonder deathly white;
-                                She stands there patient, nerved with inner might,
-                                Indomitable in her feebleness,
-                                Her face and will athirst against the light. 
-                            </em>
-                        </p>
-                        <div class="text-right">
-                        	<a href="#" class="btn btn-black rounded">Read more</a>
-                        </div>
-                    </div><!-- poem-section -->
-                </div><!-- sidebar-section -->
-                <div class="sidebar-section pb-widget">
+                <div class="poem-section-wrap">
+                    <div class="sidebar-section">
+                        <div class="section-header">Poem of the Day</div>
+                        <div class="poem-section">
+                            <div class="poem-header">
+                                <img alt="" src="images/author-thumb.png">
+                                <h4>A Study (A Soul) </h4>
+                                <p>by Christina Georgina Rossetti</p>
+                            </div>
+                            <p>
+                                <em>She stands as pale as Parian statues stand;
+                                    Like Cleopatra when she turned at bay,
+                                    And felt her strength above the Roman sway,
+                                    And felt the aspic writhing in her hand.
+                                    Her face is steadfast toward the shadowy land,
+                                    For dim beyond it looms the light of day;
+                                    Her feet are steadfast; all the arduous way
+                                    That foot-track hath not wavered on the sand.
+                                    She stands there like a beacon thro' the night,
+                                    A pale clear beacon where the storm-drift is;
+                                    She stands alone, a wonder deathly white;
+                                    She stands there patient, nerved with inner might,
+                                    Indomitable in her feebleness,
+                                    Her face and will athirst against the light. 
+                                </em>
+                            </p>
+                            <a class="btn theme-btn" href="#">View full Poem</a>
+                        </div><!-- poem-section -->
+					</div><!-- sidebar-section -->
+                </div><!-- poem-section-wrap -->
+                <div class="sidebar-section pb-widget poem-section-wrap">
                 	<div class="section-header">More in : Anniversary</div>
-	                <div class="border-section">
-                    	<h5><strong>Special Anniversary</strong></h5>
-                        <p class="poet-name">Poet : Unknown</p>
-                        <p class="tags-bar">Tags: <a href="#">anniversay</a>, <a href="#">love</a>, <a href="#">husband</a>,<a href="#">wife</a></p>
-                        <a href="#" class="btn-black btn rounded">Read More</a>
-                    </div><!-- border-section -->
-                    <div class="border-section">
-                    	<h5><strong>Special Anniversary</strong></h5>
-                        <p class="poet-name">Poet : Unknown</p>
-                        <p class="tags-bar">Tags: <a href="#">anniversay</a>, <a href="#">love</a>, <a href="#">husband</a>,<a href="#">wife</a></p>
-                        <a href="#" class="btn-black btn rounded">Read More</a>
-                    </div><!-- border-section -->
-                    <div class="border-section">
-                    	<h5><strong>Special Anniversary</strong></h5>
-                        <p class="poet-name">Poet : Unknown</p>
-                        <p class="tags-bar">Tags: <a href="#">anniversay</a>, <a href="#">love</a>, <a href="#">husband</a>,<a href="#">wife</a></p>
-                        <a href="#" class="btn-black btn rounded">Read More</a>
-                    </div><!-- border-section -->
-                    
+                    <div class="white-box clearfix">
+                        <div class="border-section">
+                            <h5><strong>Special Anniversary</strong></h5>
+                            <p class="poet-name">Poet : Unknown</p>
+                            <p class="tags-bar">Tags: <a href="#">anniversay</a>, <a href="#">love</a>, <a href="#">husband</a>,<a href="#">wife</a></p>
+                            <a href="#" class="theme-btn btn">Read More</a>
+                        </div><!-- border-section -->
+                        <div class="border-section no-border">
+                            <h5><strong>Special Anniversary</strong></h5>
+                            <p class="poet-name">Poet : Unknown</p>
+                            <p class="tags-bar">Tags: <a href="#">anniversay</a>, <a href="#">love</a>, <a href="#">husband</a>,<a href="#">wife</a></p>
+                            <a href="#" class="theme-btn btn">Read More</a>
+                        </div><!-- border-section -->
+					</div>
                 </div>
                 
             </aside><!--sidebar col-sm-4 col-md-3-->
@@ -295,29 +289,55 @@
                 </div><!-- col-sm-3 -->
                 <div class="col-sm-3">
 	                <h3>Popular Poets</h3>
-                    <ul class="icons-list">
-                        <li><a href="#">Pablo Neruda</a></li>
-                        <li><a href="#">Charles Bukowski</a></li>
-                        <li><a href="#">Edgar Allan Poe</a></li>
-                        <li><a href="#">Emily Dickinson</a></li>
-                        <li><a href="#">William Shakespeare</a></li>
-                        <li><a href="#">Pablo Neruda</a></li>
-                        <li><a href="#">Charles Bukowski</a></li>
-                        <li><a href="#">Edgar Allan Poe</a></li>
-                        <li><a href="#">Emily Dickinson</a></li>
-                        <li><a href="#">William Shakespeare</a></li>
-                    </ul>	
+                    <div class="feature-section clearfix">
+                        <div class="feature-img">
+                            <img alt="" src="images/author-1.png" class="img-thumbnail">
+                        </div>
+                        <div class=" feature-text">
+                            <h5>Robert Frost</h5>
+                            <p>March 26,</p>
+                            <p>1874 &ndash; January 29, 1963</p>
+                        </div>
+                    </div>
+                    <div class="feature-section clearfix">
+                        <div class="feature-img">
+                            <img alt="" src="images/author-1.png" class="img-thumbnail">
+                        </div>
+                        <div class=" feature-text">
+                            <h5>Robert Frost</h5>
+                            <p>March 26,</p>
+                            <p>1874 &ndash; January 29, 1963</p>
+                        </div>
+                    </div>
+                    <div class="feature-section clearfix">
+                        <div class="feature-img">
+                            <img alt="" src="images/author-1.png" class="img-thumbnail">
+                        </div>
+                        <div class=" feature-text">
+                            <h5>Robert Frost</h5>
+                            <p>March 26,</p>
+                            <p>1874 &ndash; January 29, 1963</p>
+                        </div>
+                    </div>	
                 </div><!-- col-sm-3 -->
                 <div class="col-sm-3">
                 	<h3>Follow us on</h3>
-                	<ul class="list-unstyled social-icons">
-                        <li><a class="facebook" href="#"><span class="icon-facebook"></span></a> Facebook</li>
-                        <li><a class="twitter" href="#"><span class="icon-twitter"></span></a> Twitter</li>
-                        <li><a class="linkedin" href="#"><span class="icon-linkedin"></span></a> Linkedin</li>
-                        <li><a class="youtube" href="#"><span class="icon-youtube"></span></a> Youtube</li>
-                        <li><a class="google-plus" href="#"><span class="icon-google-plus"></span></a> Google Plus</li>
-                        <li><a class="pinterest" href="#"><span class="icon-pinterest"></span></a> Pinterest</li>
-                    </ul>
+                    <div class="social-icons pb-widget">
+                        <a href="#" class="facebook"><span class="icon-facebook"></span></a>
+                        <a href="#" class="twitter"><span class="icon-twitter"></span></a>
+                        <a href="#" class="linkedin"><span class="icon-linkedin"></span></a>
+                        <a href="#" class="youtube"><span class="icon-youtube"></span></a>
+                        <a href="#" class="google-plus"><span class="icon-google-plus"></span></a>
+                        <a href="#" class="pinterest"><span class="icon-pinterest"></span></a>
+                    </div>
+                    <h3>Email Newsletter</h3>
+                    <div class="input-group">
+                        <input type="text" placeholder="Search of a Verse Poem or Quote..." class="form-control">
+                        <span class="input-group-btn">
+                        
+                          <button class="btn btn-white" type="button">Submit</button>
+                        </span>
+                    </div>
                 </div>
                 
             </div><!-- row -->

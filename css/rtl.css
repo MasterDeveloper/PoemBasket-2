@@ -63,9 +63,6 @@
 .rtl .navbar-nav > li {
   float: right;
 }
-.rtl .col-md-6 {
-  padding-right: 15px;
-}
 .rtl .navbar-toggle {
   float: right;
   margin-right: 15px;
@@ -115,11 +112,8 @@
   }
 }
 @media (max-width: 979px) {
-  .rtl [class^="col-md-"] {
-    float: none;
-  }
   .rtl [class^="col-sm-"] {
-    float: right;
+    float: right !important;
   }
   .rtl #header-left {
     float: left;
@@ -138,6 +132,9 @@
   .rtl #header-left {
     float: left;
   }
+  .rtl [class^="col-md-"] {
+    float: none;
+  }
   .rtl #header-right {
     float: none;
   }
@@ -145,16 +142,16 @@
     float: none;
   }
   .rtl [class^="col-sm-"] {
-    float: none;
+    float: none !important;
   }
   .rtl [class^="col-xs-"] {
-    float: right;
+    float: right !important;
   }
   .rtl #footer-wrap .footer-nav {
     padding: 0;
   }
-  .rtl .col-md-6 {
-    padding: 0 15px;
+  .rtl .sidebar-section .pen-list {
+    padding: 10px 0 0;
   }
   .rtl .recent-joke-wrap [class^="col-"] {
     border-right: none;

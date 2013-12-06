@@ -64,16 +64,16 @@ body {
 /* Headings
 ______________________*/
 h1 {
-  font: normal 80px 'robotobold', sans-serif;
-  color: #ffffff;
+  font: normal 45px 'robotobold', sans-serif;
+  color: #3f4c6b;
   margin: 0 0 25px;
-  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  line-height: 1;
 }
 h1 small {
-  font-size: 0.6em;
-  line-height: 1.4em;
+  font-size: 0.8em;
+  line-height: 1em;
   display: block;
-  font-family: 'robotoregular', sans-serif;
+  font-family: 'robotolight', sans-serif;
   color: inherit;
 }
 h2 {
@@ -83,7 +83,7 @@ h2 {
 }
 h3 {
   font: normal 30px 'robotothin', sans-serif;
-  color: #e2effb;
+  color: #16a085;
   margin: 0 0 10px;
 }
 h4 {
@@ -259,7 +259,7 @@ hr {
   padding: 0;
 }
 .user-list a {
-  color: #cacaca;
+  color: #666;
 }
 .pen-list {
   list-style: url(../images/pen-list.png) inside;
@@ -283,6 +283,7 @@ hr {
   border-radius: 5px 5px 0 0;
 }
 .sidebar-section h3 {
+  color: white;
   background: #16a085;
   padding: 2px 10px 3px;
   margin-bottom: 0;
@@ -308,7 +309,7 @@ hr {
   margin-bottom: 25px;
 }
 .mini-thumbs {
-  padding: 0;
+  padding: 0 0 15px;
 }
 .mini-thumbs li {
   width: 32%;
@@ -316,13 +317,19 @@ hr {
 }
 .mini-thumbs img {
   padding: 4px;
+  margin-bottom: 0;
 }
 /* Header
 ______________________*/
 #header {
   background: url(../images/header.png) no-repeat center bottom #12d4e5;
   padding: 0;
+  margin: 0;
   min-height: 320px;
+}
+#header.home-header {
+  background: url(../images/home-header.png) no-repeat center bottom #12d4e5;
+  min-height: 594px;
 }
 .header-top {
   position: relative;
@@ -371,6 +378,10 @@ ______________________*/
   line-height: 1em;
   font-size: 40px;
   margin-right: 15px;
+}
+.rtl .search-wrap .input-group-btn .btn span {
+  margin-right: 0;
+  margin-left: 15px;
 }
 .divider {
   margin: 0 10px;
@@ -467,15 +478,77 @@ ______________________*/
   background-color: transparent;
   color: #16a085;
 }
+.rtl .navbar .navbar-nav > li > a {
+  background: url(../images/nav-divider-rtl.png) no-repeat left center;
+  padding-right: 15px;
+  padding-left: 25px;
+}
 .navbar-collapse {
   padding: 0;
 }
 .bx-wrapper .bx-controls-direction a {
   color: transparent;
 }
+.home-header {
+  background: url(../images/home-header-border.png) repeat-x left center;
+  margin: 20px 0;
+}
+.home-header h2 {
+  color: #999;
+  font-family: 'robotolight', sans-serif;
+}
+.home-header h2 span {
+  background: #050D14;
+  display: inline-block;
+  padding: 0 15px;
+  line-height: 1em;
+}
+.home-header h2 span.pull-right {
+  margin-top: 2px;
+}
+.bx-viewport {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev {
+  background: url(../images/slide-prev.png) no-repeat center center;
+  left: 3px;
+}
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next {
+  background: url(../images/slide-next.png) no-repeat center center;
+  right: 3px;
+}
+.slider-1 {
+  margin: 0;
+}
+.slider-1 li {
+  position: relative;
+}
+.slider-1 li img {
+  display: block;
+  margin: 0 auto;
+}
+.slider-1 .slide-caption {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 5px;
+  color: #fff;
+  background: rgba(52, 73, 94, 0.8);
+}
+.slider-1 .slide-caption strong {
+  display: block;
+}
 /************************
 	Banner Settings 
 *************************/
+.top-text + .submit-poem {
+  margin-top: 330px;
+}
 .submit-poem {
   text-align: center;
   margin-top: 120px;
@@ -502,10 +575,9 @@ ______________________*/
 *******************************/
 .tags-bar {
   font-size: 16px;
-  color: #51779d;
+  color: #2a4a69;
 }
 .border-section {
-  padding: 15px 0;
   border-bottom: 1px solid #d9d6d6;
   -webkit-box-shadow: 0 1px 0 0 #ffffff;
   box-shadow: 0 1px 0 0 #ffffff;
@@ -531,14 +603,28 @@ ______________________*/
 .border-section .poet-name a {
   color: #16a085;
 }
+.border-section .inner-section {
+  background: white;
+  padding: 8px 10px 15px;
+  margin: 10px -7px;
+  border: 1px solid #e6e6e6;
+}
 /**********************
 	 Theme Box
  **********************/
+.sidebar-section .border-section {
+  padding: 10px 0;
+}
+.sidebar-section .border-section:last-child {
+  border-bottom: none;
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .biograpy {
-  padding: 15px 0;
   border-bottom: 1px solid #d9d6d6;
   -webkit-box-shadow: 0 1px 0 0 #ffffff;
   box-shadow: 0 1px 0 0 #ffffff;
+  background: #091622;
   color: #ccc;
 }
 .biograpy .tags-bar {
@@ -562,51 +648,85 @@ ______________________*/
 .biograpy .poet-name a {
   color: #16a085;
 }
+.biograpy .inner-section {
+  background: white;
+  padding: 8px 10px 15px;
+  margin: 10px -7px;
+  border: 1px solid #e6e6e6;
+}
 .biograpy .img-section {
   max-width: 257px;
   margin-right: 15px;
+  border-right: 8px solid #16a085;
 }
 .biograpy p {
   margin-bottom: 30px;
 }
 .biograpy .details-section {
-  margin-left: 272px;
-  margin-bottom: 35px;
+  margin: 0 15px;
 }
-.biograpy .comment-box {
-  background: #3f4f5f;
-  border: 1px solid #55687b;
-  padding: 0 15px;
-  margin-bottom: 35px;
-  position: relative;
-  -moz-border-radius: 5px;
-  -webkit-order-radius: 5px;
-  border-radius: 5px;
+.biograpy .box-header {
+  padding: 10px 0 0;
 }
-.biograpy .comment-box:before {
-  content: "";
+.biograpy h3 {
+  color: #16a085;
+}
+.biograpy .biograpy-footer {
+  background: #16a085;
+  padding: 10px 10px 8px;
+  width: 100%;
+}
+.biograpy .biograpy-footer .form-control {
+  border-color: white;
+  background: white;
+  color: #3f4f5f;
+}
+.biograpy .biograpy-footer .form-control::-moz-placeholder {
+  color: black;
+}
+.biograpy .biograpy-footer .form-control:-moz-placeholder {
+  color: black;
+}
+.biograpy .biograpy-footer .form-control:placeholder {
+  color: black;
+}
+.biograpy .biograpy-footer .btn {
+  background: #107360;
+}
+.like-bar {
+  color: #3a9dc6;
+}
+.like-bar img,
+.like-bar > span {
   display: inline-block;
-  width: 20px;
-  height: 10px;
-  position: absolute;
-  background: url(../images/comments-box.png);
-  top: 100%;
-  left: 5%;
+  margin-right: 10px;
 }
-.biograpy .comment-box h3 {
-  margin: 0;
+.tab-content .like-bar {
+  color: #666;
+  font-size: 12px;
+  margin-top: 25px;
+}
+.tab-content .like-bar > span {
+  margin-right: 0;
+  display: inline-block;
+  min-width: 160px;
+  text-align: center;
+}
+.tab-content .like-bar img {
+  margin: 0 5px;
+}
+.tab-content .border-section {
+  margin-bottom: 18px;
 }
 .rtl .biograpy .img-section {
   margin-right: 0;
   margin-left: 15px;
+  border-right: none;
+  border-left: 10px solid #16a085;
 }
 .rtl .biograpy .comment-box:before {
   left: auto;
   right: 5%;
-}
-.rtl .details-section {
-  margin-left: 0;
-  margin-right: 272px;
 }
 .input-group-btn [class^="icon-"] {
   line-height: inherit;
@@ -656,6 +776,14 @@ ______________________*/
   border-color: transparent;
   color: white;
   background: #496785;
+}
+.theme-pagination.small-text {
+  margin-bottom: 10px;
+}
+.theme-pagination.small-text li a {
+  font-size: 12px;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 .theme-pager {
   margin: 20px 0;
@@ -714,66 +842,79 @@ ______________________*/
 }
 .nav-tabs {
   border-bottom: none;
+  border-top: 3px solid #16a085;
   margin-bottom: 25px;
 }
-.nav-tabs > li {
-  margin-bottom: 4px;
-  margin-right: 2px;
-  padding: 0 5px;
-  border-bottom: 3px solid #3f4f5f;
-}
-.nav-tabs > li:hover {
-  border-bottom: 3px solid #16a085;
-}
 .nav-tabs > li > a {
-  margin: 0;
-  background: black;
-  text-transform: uppercase;
-  color: #aaaaaa;
-  -moz-border-radius: 0;
-  -webkit-order-radius: 0;
-  border-radius: 0;
-  border-style: solid;
-  border-color: #3f4f5f;
-  border-width: 3px 3px 0;
+  font-size: 20px;
   padding: 5px 15px;
-  font-size: 16px;
-  margin-bottom: -3px;
+  min-width: 196px;
+  text-align: center;
+  margin: 0 3px 0 0;
+  background: #d4dde6;
+  -moz-border-radius: 0 0 6px 6px;
+  -webkit-order-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  color: #475560;
 }
 .nav-tabs > li > a:focus,
 .nav-tabs > li > a:hover {
-  background: black;
-  border-width: 3px 3px 0;
-  color: #16a085;
+  background: #16a085;
+  color: white;
   border-color: #16a085;
 }
-.nav-tabs > li.active {
-  border-bottom: 3px solid #16a085;
-}
 .nav-tabs > li.active a {
-  background: black;
-  border-width: 3px 3px 0;
-  color: #16a085;
+  background: #16a085;
+  color: white;
   border-color: #16a085;
 }
 .nav-tabs > li.active a:hover,
 .nav-tabs > li.active a:focus {
-  background: black;
-  border-width: 3px 3px 0;
-  color: #16a085;
+  background: #16a085;
+  color: white;
   border-color: #16a085;
+}
+.tab-content .feature-section p {
+  color: black;
 }
 .poem-details-wrap {
   padding-bottom: 25px;
-  border-bottom: 1px solid black;
-  -webkit-box-shadow: 0 1px 0 0 #0c161e;
-  box-shadow: 0 1px 0 0 #0c161e;
+  border-bottom: 1px solid #d9d6d6;
+  -webkit-box-shadow: 0 1px 0 0 #ffffff;
+  box-shadow: 0 1px 0 0 #ffffff;
+}
+.poem-details {
+  margin-left: 70px;
+  position: relative;
+}
+.poem-details:before {
+  display: block;
+  content: '';
+  background: url(../images/left-icon.png) no-repeat;
+  width: 64px;
+  height: 64px;
+  position: absolute;
+  right: 100%;
+  top: 0;
+  margin-right: 10px;
 }
 .poem-details p {
   font-style: italic;
-  color: #848586;
+  color: #333;
   font-size: 22px;
   margin-bottom: 1em;
+}
+.rtl .poem-details {
+  margin-left: 0;
+  margin-right: 70px;
+}
+.rtl .poem-details:before {
+  background: url(../images/left-icon-rtl.png) no-repeat;
+  right: auto;
+  left: 100%;
+  top: 0;
+  margin-right: 0;
+  margin-left: 10px;
 }
 .poem-section-wrap {
   background: url(../images/btn-shadow.png) no-repeat center bottom;
@@ -815,7 +956,10 @@ ______________________*/
 }
 .theme-box {
   padding: 15px 10px;
-  background: rgba(14, 23, 32, 0.75);
+  background: #2a4a69;
+  -moz-border-radius: 5px;
+  -webkit-order-radius: 5px;
+  border-radius: 5px;
   border: 1px solid #2a3847;
 }
 /**********************************
@@ -855,6 +999,9 @@ ______________________*/
   padding: 0 10px;
   border: 1px solid #c2cbd3;
 }
+.white-box-2 {
+  padding: 0;
+}
 /**********************************
 		Buttons Settings 
 ************************************/
@@ -868,14 +1015,7 @@ ______________________*/
   text-transform: uppercase;
   color: white;
   font-size: 12px;
-  background-color: #364657;
-  background-image: -moz-linear-gradient(top, #273441, #364657);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#273441), to(#364657));
-  background-image: -webkit-linear-gradient(top, #273441, #364657);
-  background-image: -o-linear-gradient(top, #273441, #364657);
-  background-image: linear-gradient(to bottom, #273441, #364657);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff273441', endColorstr='#ff364657', GradientType=0);
+  background: #496785;
 }
 .btn-black.btn-lg {
   font-size: 20px;
@@ -947,74 +1087,50 @@ ______________________*/
 .page-header h2 {
   margin-bottom: 0;
 }
-.theme-pagination-2 {
-  margin-bottom: 0;
-}
-.theme-pagination-2 a {
-  font-size: 25px;
-  text-transform: uppercase;
-  color: #ccc;
-}
-.theme-pagination-2 a:hover {
-  color: #16a085;
-}
-.theme-pagination-2 .active a {
-  a: hover;
-}
 .author-listing-section {
-  background: #070f17;
-  border: 1px solid #0b1a28;
-  padding: 65px 30px 10px;
-  margin-bottom: 32px;
+  background: white;
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  margin-bottom: 35px;
   position: relative;
   text-align: center;
+  -moz-border-radius: 6px;
+  -webkit-order-radius: 6px;
+  border-radius: 6px;
 }
 .author-listing-section .btn {
   width: 100%;
-  max-width: 133px;
-}
-.author-listing-section:before {
-  background: url(../images/bottom-corner.png);
-  display: inline-block;
-  width: 20px;
-  height: 10px;
-  content: '';
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  margin-left: -10px;
+  max-width: 196px;
+  font-size: 20px;
+  margin-bottom: -15px;
 }
 .author-listing-section ul {
   list-style: url(../images/user-icon.png) inside;
   padding: 0;
   font-size: 15px;
   margin-bottom: 15px;
+  padding: 15px 20px 0;
   text-align: left;
 }
 .author-listing-section ul a {
-  color: #cacaca;
+  color: #666;
 }
 .author-listing-section ul li {
   margin-bottom: 3px;
 }
 .author-listing-section .alphabet-search {
+  font-size: 36px;
+  font-family: 'robotobold', sans-serif;
   background: #16a085;
   color: white;
-  height: 74px;
-  width: 74px;
   display: block;
-  text-align: center;
-  line-height: 64px;
-  -moz-border-radius: 50%;
-  -webkit-order-radius: 50%;
-  border-radius: 50%;
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  margin-left: -37px;
-  border: 5px solid black;
-  font-size: 40px;
+  text-align: left;
+  padding: 0 25px;
+  -moz-border-radius: 6px 6px 0 0;
+  -webkit-order-radius: 6px 6px 0 0;
+  border-radius: 6px 6px 0 0;
 }
+.rtl .author-listing-section .alphabet-search,
 .rtl .author-listing-section ul {
   text-align: right;
 }
@@ -1043,10 +1159,6 @@ ______________________*/
   -webkit-order-radius: 5px 5px 0 0;
   border-radius: 5px 5px 0 0;
 }
-.box-header h3 {
-  line-height: 54px;
-  color: #ccc;
-}
 .social-buttons {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -1063,24 +1175,6 @@ ______________________*/
   font-size: 1.4em;
   vertical-align: middle;
   height: 30px;
-}
-.btn-facebook {
-  background: #0041a2;
-}
-.btn-facebook span {
-  display: inline-block;
-  border: 1px solid;
-  padding: 5px 10px;
-  margin-right: 5px;
-  -moz-border-radius: 3px;
-  -webkit-order-radius: 3px;
-  border-radius: 3px;
-}
-.btn-twitter {
-  background: #0488cc;
-}
-.btn-pinterest {
-  background: #d70909;
 }
 /**********************************
 		Sidebar Settings 
@@ -1166,24 +1260,27 @@ ______________________*/
 .theme-box {
   color: #ccc;
 }
+.theme-box a {
+  color: #ffea00;
+}
 .icon-star {
-  color: #6a7a89;
+  color: #6a7a89 !important;
 }
 .icon-star:hover,
 .icon-star.active {
-  color: #16a085;
+  color: #16a085 !important;
 }
 .icon-heart {
-  color: #6a7a89;
+  color: #6a7a89 !important;
 }
 .icon-heart:hover,
 .icon-heart.active {
-  color: #16a085;
+  color: #16a085 !important;
 }
 .title {
   font-family: 'robotobold', sans-serif;
   font-size: 20px;
-  color: #aaa;
+  color: #fff;
 }
 /**********************
 	 SignUp/Login
@@ -1247,6 +1344,9 @@ ______________________*/
 .theme-text {
   color: #16a085;
 }
+.red-text {
+  color: #ff1f39;
+}
 .fl {
   float: left;
 }
@@ -1285,7 +1385,12 @@ ______________________*/
 	 Global Classes End
  *****************************/
 @media (max-width: 1200px) {
-  
+  .biograpy p {
+    margin-bottom: 15px;
+  }
+  .theme-pagination > li {
+    margin-bottom: 2px;
+  }
 }
 @media (max-width: 979px) {
   h1 {
@@ -1295,6 +1400,16 @@ ______________________*/
   .banner-wrap-2 {
     padding-bottom: 40px;
     min-height: inherit;
+  }
+  .like-bar {
+    margin-bottom: 15px;
+  }
+  .biograpy .biograpy-footer .btn {
+    display: block;
+    margin-bottom: 10px;
+  }
+  .biograpy .biograpy-footer .input-group-btn .btn {
+    margin-bottom: 0;
   }
 }
 @media (max-width: 767px) {
@@ -1307,10 +1422,11 @@ ______________________*/
   .header-top {
     padding: 20px 0 30px;
   }
-  .navbar {
-    -moz-border-radius: 8px;
-    -webkit-order-radius: 8px;
-    border-radius: 8px;
+  .biograpy .biograpy-footer {
+    padding: 10px 0;
+  }
+  .biograpy .biograpy-footer div {
+    width: 100%;
   }
   .navbar .navbar-collapse {
     padding: 0 15px;
@@ -1352,15 +1468,22 @@ ______________________*/
   .social-icons {
     margin: 3px 0;
   }
+  .biograpy {
+    padding: 15px;
+  }
   .biograpy .img-section {
     float: none !important;
-    margin: 0 0 10px;
+    margin: 0;
     text-align: center;
     width: auto;
     max-width: none;
+    border: none;
   }
   .biograpy .details-section {
-    margin-left: 0;
+    margin: 0;
+  }
+  .search-wrap {
+    padding: 20px 0;
   }
   .search-wrap .form-control {
     height: auto;
@@ -1368,8 +1491,11 @@ ______________________*/
   }
   .search-wrap .input-group-btn .btn {
     height: 47px;
-    font-size: 28px;
+    font-size: 22px;
     width: auto;
+  }
+  .search-wrap .input-group-btn .btn [class^="icon-"] {
+    font-size: 22px;
   }
   .page-header {
     margin: 0;
@@ -1389,6 +1515,21 @@ ______________________*/
   }
   .poem-details p {
     font-size: 16px;
+  }
+  .theme-table {
+    width: 100%;
+    margin: 0 0 15px;
+  }
+  .user-list {
+    margin-bottom: 0;
+  }
+  .border-list li:first-child {
+    border-top: none;
+    -webkit-box-shadow: 0 1px 0 0 #ffffff;
+    box-shadow: 0 1px 0 0 #ffffff;
+  }
+  .rtl .navbar .navbar-nav > li > a {
+    background: none;
   }
 }
 @media (max-width: 479px) {

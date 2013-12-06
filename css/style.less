@@ -85,18 +85,18 @@ ______________________*/
 	margin: @margin;
 	
 }
-h1{.heading( 80px,  @boldFamily, white, 0 0 25px);
-	text-shadow: 2px 2px 0 rgba(0,0,0,0.5);
+h1{.heading( 45px,  @boldFamily, #3f4c6b, 0 0 25px);
+	line-height:1;
 	small{
-		font-size:0.6em;
-		line-height:1.4em;
+		font-size:0.8em;
+		line-height:1em;
 		display:block;
-		font-family: @regularFamily;
+		font-family: @baseFamily;
 		color:inherit;
 	}
 }
 h2{.heading( 40px,  @regularFamily, #1f303f, 0 0 10px);}
-h3{.heading( 30px,  @thinFamily, #e2effb, 0 0 10px);}
+h3{.heading( 30px,  @thinFamily, @themeColor, 0 0 10px);}
 h4{.heading( 20px,  @regularFamily, white, 0 0 10px);}
 h5{.heading( 16px,  @baseFamily, #999, 0 0 10px);}
 strong{
@@ -252,7 +252,7 @@ hr{
 	list-style:url(../images/user-icon.png) inside;
 	padding:0;
 	a{
-		color:#cacaca;
+		color:#666;
 	}
 }
 .pen-list{
@@ -275,6 +275,7 @@ hr{
 	background:#496785;
 	.radius(5px 5px 0 0 );
 	h3{
+		color:white;
 		background:@themeColor;
 		padding:2px 10px 3px;
 		margin-bottom:0;
@@ -303,13 +304,14 @@ hr{
 	margin-bottom:@marginB;
 }
 .mini-thumbs{
-	padding:0;
+	padding:0 0 15px;
 	li{
 		width:32%;
 		margin:10px 0 0;
 	}
 	img{
 		padding:4px;
+		margin-bottom:0;
 	}
 	
 }
@@ -321,8 +323,12 @@ ______________________*/
 #header{
 	background: url(../images/header.png) no-repeat center bottom #12d4e5;
 	padding:0;
+	margin:0;
 	min-height:320px;
-
+	&.home-header{
+	background: url(../images/home-header.png) no-repeat center bottom #12d4e5;
+	min-height:594px;
+}
 }
 .header-top{
 	position:relative;
@@ -375,6 +381,19 @@ ______________________*/
 			}
 		}
 	}
+}
+.rtl{
+	.search-wrap{
+		.input-group-btn{
+			.btn{
+				span{
+					margin-right:0;
+					margin-left:15px;
+				}
+			}
+		}
+	}
+
 }
 
 
@@ -464,7 +483,19 @@ ______________________*/
 				> a{
 					background-color:transparent;
 					color: @hovercolor;
+					
 				}
+			}
+		}
+	}
+}
+.rtl .navbar{
+	.navbar-nav {
+		> li{
+			> a{
+				background:url(../images/nav-divider-rtl.png) no-repeat left center;
+				padding-right:15px;
+				padding-left:25px;
 			}
 		}
 	}
@@ -476,10 +507,68 @@ ______________________*/
 .bx-wrapper .bx-controls-direction a{
 	color:transparent;
 }
+.home-header{
+	background:url(../images/home-header-border.png) repeat-x left center;
+	margin: 20px 0;
+	h2{
+		color:#999;
+		font-family:@baseFamily;
+		span{
+			background:#050D14;
+			display:inline-block;
+			padding:0 15px;
+			line-height:1em;
+			&.pull-right{
+				margin-top:2px;
+			}
+		}
+	}
+}
+.bx-viewport{
+	.box-sizing(content-box);
+}
+.bx-wrapper .bx-prev:hover,
+.bx-wrapper .bx-prev{
+	background:url(../images/slide-prev.png) no-repeat center center;
+	left:3px;
+}
+.bx-wrapper .bx-next:hover,
+.bx-wrapper .bx-next{
+	background:url(../images/slide-next.png) no-repeat center center;
+	right:3px;
+}
+.slider-1{
+	margin:0;
+	li{
+		position:relative;
+		img{
+			display:block;
+			margin:0 auto;
+		}
+	}
+	.slide-caption{
+		position:absolute;
+		left:0;
+		right:0;
+		bottom:0;
+		padding:5px;
+		color: #fff;
+		background: rgba(52, 73, 94, 0.8);
+		strong{
+			display:block;
+		}
+	}
+}
+
 /************************
 	Banner Settings 
 *************************/
 .banner-wrap{
+}
+.top-text{
+	& + .submit-poem{
+		margin-top:330px;
+	}
 }
 .submit-poem{
 	text-align:center;
@@ -506,10 +595,9 @@ ______________________*/
 *******************************/
 .tags-bar{
 	font-size:16px;
-	color:#51779d;
+	color:#2a4a69;
 }
 .border-section{
-	padding:15px 0;
     border-bottom: 1px solid #d9d6d6;
     .box-shadow(0 1px 0 0 white);
 	.tags-bar{
@@ -534,64 +622,112 @@ ______________________*/
 		}
 		
 	}
+	.inner-section{
+		background:white;
+		padding:8px 10px 15px;
+		margin:10px -7px;
+		border:1px solid #e6e6e6;
+	}
 }
 /**********************
 	 Theme Box
  **********************/
+ .sidebar-section{
+	 .border-section{
+		 padding:10px 0;
+		 &:last-child{
+			 border-bottom:none;
+			 .box-shadow(none);
+		}
+		}
+}
 .biograpy{
 	@width: 257px;
 	.border-section;
+	background:#091622;
 	color:#ccc;
 	.img-section{
 		max-width:@width;
 		margin-right:15px;
+		border-right: 8px solid @themeColor;
 	}
 	
 	p{
 		margin-bottom:30px;
 	}
 	.details-section{
-		margin-left:@width + 15px;
-		margin-bottom:35px;
+		margin:0 15px;
 	}
-	.comment-box{
-		background:#3f4f5f;
-		border:1px solid #55687b;
-		padding:0 15px;
-		margin-bottom:35px;
-		position:relative;
-		.radius(5px);
-			&:before{
-			content:"";
-			display:inline-block;
-			width:20px;
-			height:10px;
-			position:absolute;
-			background:url(../images/comments-box.png);
-			top:100%;
-			left:5%;
+	
+	.box-header{
+		padding:10px 0 0;
+	}
+	h3{
+		color:@themeColor;
+	}
+	.biograpy-footer{
+		background:@themeColor;
+		padding:10px 10px 8px;
+		width:100%;
+		.form-control{
+			border-color:white;
+			background:white;
+			color: #3f4f5f;
 		}
-		h3{
-			margin:0;
+		.form-control::-moz-placeholder{
+			color:black;
 		}
-		
+		.form-control:-moz-placeholder{
+			color:black;
+		}
+		.form-control:placeholder{
+			color:black;
+		}
+		.btn{
+			background:darken(@themeColor, 10%);
+		}
+	}
+
+}
+.like-bar{
+	color:#3a9dc6;
+	img,
+	> span{
+		display:inline-block;
+		margin-right:10px;
 	}
 }
-
+.tab-content{
+	.like-bar{
+		color:#666;
+		font-size:12px;
+		margin-top:25px;
+		> span{
+			margin-right:0;
+			display:inline-block;
+			min-width:160px;
+			text-align:center;
+		}
+		img{
+			margin:0 5px;
+		}
+	}
+	.border-section{
+		margin-bottom:18px;
+	}
+}
 .rtl{
 	.biograpy{
 		.img-section{
 			margin-right:0;
 			margin-left:15px;
+			border-right:none;
+			border-left:10px solid @themeColor;
 		}
 		.comment-box:before{
 			left:auto;
 			right:5%;
 		}
-	}
-	.details-section{
-		margin-left:0;
-		margin-right:272px;
 	}
 
 }
@@ -654,6 +790,15 @@ ______________________*/
 		}
 	
 	}
+	&.small-text{
+		margin-bottom:10px;
+		li a{
+			font-size:12px;
+			line-height:20px;
+			text-transform:uppercase;
+		}
+	}
+
 }
 .theme-pager{
 	margin:20px 0;
@@ -712,47 +857,34 @@ ______________________*/
 }
 .nav-tabs {
 	border-bottom:none;
+	border-top:3px solid @themeColor;
 	margin-bottom:25px;
 	> li{
-		margin-bottom:4px;
-		margin-right:2px;
-		padding:0 5px;
-		border-bottom:3px solid #3f4f5f;
-		&:hover{
-			border-bottom:3px solid @themeColor;
-		}
 		> a{
-			margin:0;
-			background: black;
-			text-transform:uppercase;
-			color:#aaaaaa;
-			.radius(0);
-			border-style:solid;
-			border-color: #3f4f5f;
-			border-width:3px 3px 0;
+			font-size:20px;
 			padding:5px 15px;
-			font-size: 16px;
-			margin-bottom:-3px;
+			min-width:196px;
+			text-align:center;
+			margin:0 3px 0 0;
+			background: #d4dde6;
+			.radius(0 0 6px 6px);
+			color:#475560;
 			&:focus,
 			&:hover{
-				background:black;
-				border-width:3px 3px 0;
-				color:@themeColor;
+				background:@themeColor;
+				color:white;
 				border-color: @themeColor;
 			}
 		}
 		&.active{
-			border-bottom:3px solid @themeColor;
 			a{
-				background:black;
-				border-width:3px 3px 0;
-				color:@themeColor;
+				background:@themeColor;
+				color:white;
 				border-color: @themeColor;
 				&:hover,
 				&:focus{
-					background:black;
-					border-width:3px 3px 0;
-					color:@themeColor;
+					background:@themeColor;
+					color:white;
 					border-color: @themeColor;
 				}
 			}
@@ -760,21 +892,54 @@ ______________________*/
 	}
 	
 }
+.tab-content{
+	.feature-section p{
+		color:black;
+	}
+}
 .sidebar-section{
 }
 .poem-details-wrap{ // this styles for detail page.
 	padding-bottom:25px;
-	border-bottom:1px solid black;
-	.box-shadow(0 1px 0 0 #0c161e);
+	border-bottom:1px solid #d9d6d6;
+	.box-shadow(0 1px 0 0 white);
 }
 .poem-details{
+	margin-left:70px;
+	position:relative;
+	&:before{
+		display:block;
+		content:'';
+		background:url(../images/left-icon.png) no-repeat;
+		width:64px;
+		height:64px;
+		position:absolute;
+		right:100%;
+		top:0;
+		margin-right:10px;
+	}
 	p{
 		font-style:italic;
-		color:#848586;
+		color:#333;
 		font-size:22px;
 		margin-bottom:1em;
 	}
 }
+.rtl{
+	.poem-details{
+		margin-left:0;
+		margin-right:70px;
+		&:before{
+			background:url(../images/left-icon-rtl.png) no-repeat;
+			right:auto;
+			left: 100%;
+			top:0;
+			margin-right:0;
+			margin-left:10px;
+		}
+	}
+}
+
 .poem-section-wrap{
 	background:url(../images/btn-shadow.png) no-repeat center bottom;
 	background-size:110% auto;
@@ -823,7 +988,8 @@ ______________________*/
 }
 .theme-box{
 	padding:15px 10px;
-	background:rgba(14, 23, 32, 0.75);
+	background:#2a4a69;
+	.radius(5px);
 	border:1px solid #2a3847;
 }
 /**********************************
@@ -858,6 +1024,9 @@ ______________________*/
 	padding:0 10px;
 	border:1px solid #c2cbd3;
 }
+.white-box-2{
+	padding:0;
+}
 
 /**********************************
 		Buttons Settings 
@@ -872,12 +1041,13 @@ ______________________*/
 	text-transform:uppercase;
 	color:white;
 	font-size:12px;
+	background:#496785;
 	&.btn-lg{
 		font-size:20px;
 		text-transform:none;
 		font-family:@regularFamily;
 	}
-	.gradient(#273441, #364657);
+	
 	&:focus,
 	&:hover{
 		color: white;
@@ -938,73 +1108,45 @@ ______________________*/
 		margin-bottom:0;
 	}
 }
-.theme-pagination-2{
-	margin-bottom:0;
-	a{
-		font-size:25px;
-		text-transform:uppercase;
-		color:#ccc;
-		&:hover{
-			color:@themeColor;
-		}
-	}
-	.active{
-		a{
-			a:hover;
-		}
-	}
-}
 
 .author-listing-section{
-	background:#070f17;
-	border:1px solid #0b1a28;
-	padding:65px 30px 10px;
-	margin-bottom:32px;
+	background:white;
+	.box-shadow(0 0 5px rgba(0,0,0,0.1));
+	margin-bottom:35px;
 	position:relative;
 	text-align:center;
+	.radius(6px);
 	.btn{
 		width:100%;
-		max-width:133px;
-	}
-	&:before{
-		background:url(../images/bottom-corner.png);
-		display:inline-block;
-		width:20px;
-		height:10px;
-		content:'';
-		position:absolute;
-		top:100%;
-		left:50%;
-		margin-left:-10px;
+		max-width:196px;
+		font-size:20px;
+		margin-bottom:-15px;
 	}
 	ul{
 		.user-list;
 		font-size:15px;
 		margin-bottom:15px;
+		padding:15px 20px 0;
 		text-align:left;
 		li{
 			margin-bottom:3px;
 		}
 	}
 	.alphabet-search{
+		font-size:36px;
+		font-family: @boldFamily;
 		background:@themeColor;
 		color:white;
-		height:74px;
-		width:74px;
 		display:block;
-		text-align:center;
-		line-height:64px;
-		.radius(50%);
-		position:absolute;
-		top:-14px;
-		left:50%;
-		margin-left:-37px;
-		border:5px solid black;
-		font-size:40px;
+		text-align:left;
+		padding:0 25px;
+		.radius(6px 6px 0 0);
 	}
 }
+
 .rtl{
 	.author-listing-section{
+		.alphabet-search,
 		ul{
 			text-align:right;
 		}
@@ -1035,12 +1177,6 @@ ______________________*/
 	.radius(5px 5px 0 0);
 
 }
-.box-header{
-	h3{
-		line-height:54px;
-		color:#ccc;
-	}
-}
 .social-buttons{
 	padding-top:15px;
 	padding-bottom:15px;
@@ -1061,23 +1197,6 @@ ______________________*/
 }
 
 
-.btn-facebook{
-	background:#0041a2;
-	span{
-		display:inline-block;
-		border:1px solid;
-		padding:5px 10px;
-		margin-right:5px;
-		
-		.radius(3px);
-	}
-}
-.btn-twitter{
-	background:#0488cc;
-}
-.btn-pinterest{
-	background:#d70909;
-}
 
 /**********************************
 		Sidebar Settings 
@@ -1176,12 +1295,15 @@ ______________________*/
 }
 .theme-box{
 	color: #ccc;
+	a{
+		color:#ffea00;
+	}
 }
 .icon-star{
-	color:#6a7a89;
+	color:#6a7a89 !important;
 	&:hover,
 	&.active{
-		color:@themeColor;
+		color:@themeColor !important;
 	}
 }
 .icon-heart{
@@ -1190,7 +1312,7 @@ ______________________*/
 .title{
 	font-family:@boldFamily;
 	font-size:20px;
-	color:#aaa;
+	color:#fff;
 }
 /**********************
 	 SignUp/Login
@@ -1258,6 +1380,9 @@ ______________________*/
 .theme-text{
 	color:@themeColor;
 }
+.red-text{
+	color: #ff1f39;
+}
 
 .fl{ float:left}
 .fr{ float:right}
@@ -1284,7 +1409,14 @@ ______________________*/
  *****************************/
 
 @media (max-width: 1200px){
-
+.biograpy p{
+	margin-bottom:15px;
+}
+.theme-pagination{
+	> li{
+		margin-bottom:2px;
+	}
+}
 }
 @media (max-width: 979px) {
 h1{
@@ -1295,6 +1427,20 @@ h1{
 	padding-bottom:40px;
 	min-height:inherit;
 }
+.like-bar{
+	margin-bottom:15px;
+}
+	.biograpy .biograpy-footer{
+	 .btn{
+		display:block;
+		margin-bottom:10px;
+	 }
+		.input-group-btn{
+			.btn{
+				margin-bottom:0;
+			}
+		}
+	}
 }
 
 
@@ -1309,8 +1455,13 @@ h2{
 .header-top{
 	padding:20px 0 30px;
 }
+.biograpy .biograpy-footer{
+	padding:10px 0;
+	div{
+		width:100%;
+	}
+}
 .navbar{
-	.radius(8px);
 	.navbar-collapse{
 		padding:0 15px;
 	}
@@ -1356,35 +1507,42 @@ h2{
 	margin:3px 0;
 }
 .biograpy {
+	padding:15px;
 	.img-section{
 		float:none !important;
-		margin:0 0 10px;
+		margin:0;
 		text-align:center;
 		width:auto;
 		max-width:none;
+		border:none;
 	}
 	.details-section{
-		margin-left:0;
+		margin:0;
 	}
-
 }
 .search-wrap{
+	padding:20px 0;
 	.form-control{
 		height:auto;
 		font-size:18px;
 	}
 	.input-group-btn .btn{
 		height:47px;
-		font-size:28px;
+		font-size:22px;
 		width:auto;
+		[class^="icon-"]{
+			font-size:22px;
+		}
 		
 	}
 }
 .page-header{
 	margin:0;
 }
+
 .theme-pagination-2 a{
 	font-size:14px;
+	
 }
 .nav-tabs > li{
 	display:block;
@@ -1399,7 +1557,21 @@ h2{
 .poem-details p{
 	font-size:16px;
 }
+.theme-table{
+	width:100%;
+	margin:0 0 15px;
+}
 
+.user-list{
+	margin-bottom:0;
+}
+.border-list li:first-child{
+	border-top:none;
+	.box-shadow(0 1px 0 0 white);
+}
+.rtl .navbar .navbar-nav > li > a{
+	background:none;
+}
 }
 @media (max-width: 479px) {
 .logo-wrap{
